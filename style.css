@@ -1,6 +1,7 @@
 body{
     background-color: whitesmoke;
     background-size: cover;
+    background-image: url(bg.jpg);
 }
 .logo{
  font-size: 1.5em;
@@ -157,8 +158,6 @@ button {
 button:hover {
   background: #000;
 }
-
-/* 📱 Mobile Responsive */
 @media (max-width: 600px) {
   .form-group {
     width: 100%;
