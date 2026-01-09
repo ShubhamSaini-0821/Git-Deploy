@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body{
     background-color: whitesmoke;
     background-size: cover;
@@ -25,6 +28,9 @@ body{
 .navlinks a{
     text-decoration: none;
     color: white;
+}
+.details{
+  animation:fadeup 1.2s ease;
 }
 .details h1,h2{
     display: flex;
@@ -59,10 +65,14 @@ body{
     justify-content: center;
     border-color: black;
     border-radius: 50%;
+    transition:0.4s;
 }
 .pic{
     display: flex;
     justify-content: center;
+}
+img:hover{
+    transform:scale(1.05);
 }
 .About h1{
     display: flex;
@@ -71,13 +81,22 @@ body{
 .skills{
   display: flex;
   justify-content: center;
+ }
+.box1{ padding:10px 18px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.6);
+  transition:0.3s;
+  cursor:pointer;
+}
+.box1:hover{
+  background:#333;
+  color:white;
+  transform:translateY(-5px);
 }
 .box1{
     border:2px solid white;
-    background-color: grey;
     padding: 10px;
     font-size: 20px;
-    border-radius: 30%0;
     margin:0 40px;
 }
 .projects{
@@ -90,6 +109,12 @@ body{
    margin: 20px;
    background-color: rgb(222, 216, 216);
    border-radius:20%;
+   transition:0.4s;
+   position:relative;
+}     
+.project1:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 #contact1{
     display:flex;
@@ -133,11 +158,14 @@ body{
   border: 1px solid #ccc;
   outline: none;
   font-size: 15px;
+  transition:0.3s;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: #333;
+  box-shadow:0 0 5px rgba(0,0,0,0.3);
+  outline:none;
 }
 
 .full-width {
@@ -156,10 +184,28 @@ button {
 }
 
 button:hover {
-  background: #000;
+  background: black;
+  letter-spacing: 1px;
 }
+footer {
+  text-align: center;
+  padding: 8px;
+  background: #222;
+  color: #ddd;
+}
+
 @media (max-width: 600px) {
   .form-group {
     width: 100%;
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
